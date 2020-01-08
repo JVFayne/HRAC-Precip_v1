@@ -1,5 +1,5 @@
 date()
-TPCPfiles<-as.matrix.data.frame(read.csv("F:/HOSSEIN_TRMM_elev/Stations_ALL_US/stations50000_2.csv"))
+TPCPfiles<-as.matrix.data.frame(read.csv("/stations50000_2.csv"))
 date()
 
 Stations<-as.matrix(unique(TPCPfiles[,2]))
@@ -27,11 +27,11 @@ for (i in 1:length(stations2)){
   }
 }
 date()
-write.csv(stationbygrep,"F:/HOSSEIN_TRMM_elev/stationnamesonly1-50k_50percent.csv")
+write.csv(stationbygrep,"/stationnamesonly1-50k_50percent.csv")
 date()
 
 
-stationbygrep<-as.matrix(read.csv("F:/HOSSEIN_TRMM_elev/stationnamesonly1-50k_50percent.csv"))[,2]
+stationbygrep<-as.matrix(read.csv("/stationnamesonly1-50k_50percent.csv"))[,2]
 ###### once the stations are chosen, parse the precipfiles
 
 
